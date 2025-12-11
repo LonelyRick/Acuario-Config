@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa Acuario 240L</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #2a5298;
+        }
+        
+        .section h2 {
+            color: #1e3c72;
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h3 {
+            color: #2a5298;
+            font-size: 1.5em;
+            margin: 20px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .spec-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .spec-card h4 {
+            color: #2a5298;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .fish-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .fish-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .fish-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        
+        .fish-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .fish-info {
+            padding: 20px;
+        }
+        
+        .fish-name {
+            font-size: 1.4em;
+            color: #1e3c72;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .fish-scientific {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        
+        .fish-quantity {
+            background: #2a5298;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .fish-details {
+            list-style: none;
+        }
+        
+        .fish-details li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .fish-details li:last-child {
+            border-bottom: none;
+        }
+        
+        .fish-details strong {
+            color: #2a5298;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #2a5298;
+        }
+        
+        .timeline-week {
+            background: #2a5298;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .plant-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .plant-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .plant-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .plant-name {
+            color: #1e3c72;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .plant-zone {
+            background: #28a745;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .success-box h4 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+        
+        .parameter-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .parameter-table th {
+            background: #2a5298;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .parameter-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .parameter-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .layout-diagram {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        
+        .aquarium-view {
+            border: 3px solid #2a5298;
+            border-radius: 10px;
+            padding: 30px;
+            background: linear-gradient(180deg, #e3f2fd 0%, #90caf9 50%, #42a5f5 100%);
+            position: relative;
+            min-height: 400px;
+        }
+        
+        .zone {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        
+        .zone-surface {
+            background: rgba(255, 255, 255, 0.7);
+            color: #1e3c72;
+        }
+        
+        .zone-upper {
+            background: rgba(100, 181, 246, 0.6);
+            color: #0d47a1;
+        }
+        
+        .zone-middle {
+            background: rgba(66, 165, 245, 0.6);
+            color: #0d47a1;
+        }
+        
+        .zone-bottom {
+            background: rgba(139, 195, 74, 0.7);
+            color: #1b5e20;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .fish-card, .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .btn-print {
+            background: #2a5298;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        
+        .btn-print:hover {
+            background: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .image-credit {
+            font-size: 0.75em;
+            color: #999;
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐠 ACUARIO COMUNITARIO 240L</h1>
+            <p>Guía Completa de Configuración y Especies</p>
+            <button class="btn-print" onclick="window.print()">🖨️ Imprimir Guía</button>
+        </div>
+        
+        <div class="content">
+            <!-- ANÁLISIS DE VIABILIDAD -->
+            <div class="section">
+                <h2></h2>
+                <h3>Equipamiento Seleccionado</h3>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <h4>🏠 Acuario</h4>
+                        <p><strong>Volumen:</strong> 240 litros<br>
+                        <strong>Dimensiones estimadas:</strong> 120 x 40 x 50 cm</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🪑 Mesa</h4>
+                        <p><strong>Modelo:</strong> Fluval Roma 240<br>
+                        <strong>Características:</strong> Cerrada, con compartimento para filtro</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🔄 Filtro</h4>
+                        <p><strong>Modelo:</strong> AQUAEL Ultra Filter 1400<br>
+                        <strong>Caudal:</strong> 1400 L/h (5.8x volumen) ✅<br>
+                        <strong>Características:</strong> Silencioso, autocebado, válvula de parada</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>💡 Iluminación</h4>
+                        <p><strong>Modelo:</strong> Chihiros WRGB 2 10 Year Edition<br>
+                        <strong>Calidad:</strong> Premium - Perfecta para plantado denso</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARÁMETROS DEL AGUA -->
+            <div class="section">
+                <h2>💧 PARÁMETROS ÓPTIMOS DEL AGUA</h2>
+                
+                <table class="parameter-table">
+                    <thead>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Rango Óptimo</th>
+                            <th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>pH</strong></td>
+                            <td>6.5 - 7.2</td>
+                            <td>Ligeramente ácido a neutro</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GH (Dureza)</strong></td>
+                            <td>5 - 12 °dH</td>
+                            <td>Agua blanda a moderada</td>
+                        </tr>
+                        <td><strong>GH+ (Dureza Óptima)</strong></td>
+                        <td>6 - 7 °dH</td>
+                        <td>Valor ideal para todas las especies del acuario</td>
+                        <tr>
+                            <td><strong>Temperatura</strong></td>
+                            <td>24 - 26°C</td>
+                            <td>Compromiso ideal para todas las especies</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Amonio (NH3/NH4)</strong></td>
+                            <td>0 ppm</td>
+                            <td>CRÍTICO - Debe ser siempre 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nitritos (NO2)</strong></td>
+                            <td>0 ppm</td>
+                            <td>CRÍTICO - Debe ser siempre 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nitratos (NO3)</strong></td>
+                            <td>< 20 ppm</td>
+                            <td>Ideal < 10 ppm con plantas</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+
+            <!-- ESPECIES SELECCIONADAS -->
+            <div class="section">
+                <h2>🐟 GUÍA VISUAL DE ESPECIES</h2>
+                <p style="margin-bottom: 20px;"><strong>Total: 73 peces + 20 invertebrados | Carga biológica: ~80% (Óptima)</strong></p>
+                
+                <div class="fish-grid">
+                    <!-- Hemigrammus bleheri -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/yYXKxZH29pPlyxp7HMtt82mTK1gGtCDIO8vi_lU85Qs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2E5L1BldGl0ZWxs/YV9ibGVoZXJpXyhI/ZW1pZ3JhbW11c19i/bGVoZXJpXy1fMyku/anBn" alt="Tetra Borrachito - Hemigrammus bleheri" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Tetra Borrachito</div>
+                            <div class="fish-scientific">Hemigrammus bleheri</div>
+                            <div class="fish-quantity">🐠 Cantidad: 10 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>4-5 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Media-Superior</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>5.5-7.0</span></li>
+                                <li><strong>Temp:</strong> <span>23-26°C</span></li>
+                                <li><strong>GH:</strong> <span>1–8 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> Cabeza roja brillante que se extiende más allá de las branquias, cola rayada blanco-negro. Cardumen muy cohesionado y activo. Excelente indicador de calidad del agua (palidecen si hay problemas).</p>
+                            <p class="image-credit">Busca: "Hemigrammus bleheri" o "Rummy nose tetra"</p>
+                        </div>
+                    </div>
+
+                    <!-- Rasbora Galaxy -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/7toB3Y1ys55dWymxT38NduWif_kcwRl50f5NR7dGxO0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmlzaGlwZWRpYS5l/cy93cC1jb250ZW50/L3VwbG9hZHMvMjAx/My8wNS9EYW5pb19t/YXJnYXJpdGF0dXNf/Mi5qcGc" alt="Rasbora Galaxy - Danio margaritatus" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Rasbora Galaxy</div>
+                            <div class="fish-scientific">Danio margaritatus (Celestichthys margaritatus)</div>
+                            <div class="fish-quantity">🐠 Cantidad: 15 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>2-3 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Media</span></li>
+                                <li><strong>Temperamento:</strong> <span>Tímido, pacífico</span></li>
+                                <li><strong>pH:</strong> <span>6.5-7.5</span></li>
+                                <li><strong>Temp:</strong> <span>20-26°C</span></li>
+                                <li><strong>GH:</strong> <span>1–12 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> Cuerpo azul oscuro/verde con puntos blancos/dorados como un cielo estrellado. Aletas rojas brillantes en machos. Muy pequeños pero espectaculares. Grupos grandes les dan confianza.</p>
+                            <p class="image-credit">Busca: "Danio margaritatus" o "Celestial pearl danio"</p>
+                        </div>
+                    </div>
+
+                    <!-- Tetra Cardenal -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/uvrNslrb60_VBrh57Zi2t_9pNBfNPdjwIv6OY1mpIaY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/em9vcGx1cy5lcy9t/YWdhemluZS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMi8wNi9U/ZXRyYS1jYXJkZW5h/bC0xLndlYnA" alt="Tetra Cardenal - Paracheirodon axelrodi" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Tetra Cardenal</div>
+                            <div class="fish-scientific">Paracheirodon axelrodi</div>
+                            <div class="fish-quantity">🐠 Cantidad: 10 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>4-5 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Media-Superior</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>4.5-6.5</span></li>
+                                <li><strong>Temp:</strong> <span>24-28°C</span></li>
+                                <li><strong>GH:</strong> <span>1–6 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> MÁS COLORIDO que el Neón - línea roja recorre TODO el cuerpo (desde la nariz hasta la cola) + franja azul neón superior brillante. Vientre plateado. Absolutamente deslumbrante bajo buena iluminación.</p>
+                            <p class="image-credit">Busca: "Paracheirodon axelrodi" o "Cardinal tetra"</p>
+                        </div>
+                    </div>
+
+                    <!-- Tetra del Congo -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/ehBKb-kAsAKopwPSEawP_tIKAGSnw9DjkVXq-NuALlY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hcXVh/ZGljdGlvbi53b3Js/ZC9pbWcvcHJvZmls/ZS80MzItY29uZ28t/MTYud2VicA" alt="Tetra del Congo - Phenacogrammus interruptus" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">⭐ Tetra del Congo</div>
+                            <div class="fish-scientific">Phenacogrammus interruptus</div>
+                            <div class="fish-quantity">🐠 Cantidad: 8 ejemplares (MÍNIMO 6)</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>8-10 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Media</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico pero activo</span></li>
+                                <li><strong>pH:</strong> <span>6.0-7.5</span></li>
+                                <li><strong>Temp:</strong> <span>23-27°C</span></li>
+                                <li><strong>GH:</strong> <span>5–15 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> ¡ESPECTACULAR! Escamas iridiscentes que reflejan plateado, azul turquesa, dorado y naranja según la luz. Machos con aletas largas y veladas. El PROTAGONISTA absoluto del acuario. Nadan elegantemente.</p>
+                            <p class="image-credit">Busca: "Phenacogrammus interruptus" o "Congo tetra"</p>
+                        </div>
+                    </div>
+
+                    <!-- Rasbora Arlequín -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/oc4nHE9X0_lyiazum7HXPyOXgGDWh2rhzRs0t6JCFEk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hcXVh/cG91c3MuZnIvY2Ru/L3Nob3AvYXJ0aWNs/ZXMvaGFybGVxdWlu/LXJhc2JvcmE0Lmpw/Zz92PTE2ODA3NzE4/OTAmd2lkdGg9MzAw/MA" alt="Rasbora Arlequín - Trigonostigma heteromorpha" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Rasbora Arlequín</div>
+                            <div class="fish-scientific">Trigonostigma heteromorpha</div>
+                            <div class="fish-quantity">🐠 Cantidad: 8 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>4-5 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Media-Superior</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>6.0-7.8</span></li>
+                                <li><strong>Temp:</strong> <span>22-28°C</span></li>
+                                <li><strong>GH:</strong> <span>2–12 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> Cuerpo naranja-rojizo metálico con mancha negra triangular distintiva en la parte posterior. Forma de cuerpo alta y comprimida. MUY resistentes, perfectos para principiantes. Cardumen activo.</p>
+                            <p class="image-credit">Busca: "Trigonostigma heteromorpha" o "Harlequin rasbora"</p>
+                        </div>
+                    </div>
+
+                    <!-- Corydoras Juli -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/iDmu3JDzYZan9vcfB5NDmKwt5eO_HzpOzWSDEZbuT3w/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWN1YXJpb3BsYW50/YWRvLmNvbS8xMjMz/MS1tZWRpdW1fZGVm/YXVsdC9jb3J5ZG9y/YS1sZW9wYXJkby1q/dWxpaS5qcGc" alt="Corydoras Paleatus" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Corydoras Juli</div>
+                            <div class="fish-scientific">Hoplisoma julii</div>
+                            <div class="fish-quantity">🐠 Cantidad: 10 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>5-6 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Fondo</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>6.0-8.0</span></li>
+                                <li><strong>Temp:</strong> <span>23-26°C</span></li>
+                                <li><strong>GH:</strong> <span>2–15 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> Patrón moteado verde-azulado metálico. Las MÁS resistentes de todas las Corydoras. Constantemente buscando comida en el fondo. Barbillas sensibles para explorar. Muy sociales entre ellas.</p>
+                            <p class="image-credit">Busca: "Corydoras Juli" o "Cory leopardo"</p>
+                        </div>
+                    </div>
+
+                    <!-- Corydoras Gold Laser -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/SD-YJxlvtkdEkZq48z3TvsXVEZ4nKarc-xXol_ZZ1gg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hcXVh/ZGljdGlvbi53b3Js/ZC9pbWcvcHJvZmls/ZS80MzItZ29sZC1s/YXNlci1jb3J5ZG9y/YXMtbmV3MS53ZWJw" alt="Corydoras Panda" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Corydoras Gold Laser</div>
+                            <div class="fish-scientific">Corydoras Gold Laser</div>
+                            <div class="fish-quantity">🐠 Cantidad: 6 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>3-7.5cm</span></li>
+                                <li><strong>Zona:</strong> <span>Fondo</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>6.0-7.2</span></li>
+                                <li><strong>Temp:</strong> <span>22-28°C</span></li>
+                                <li><strong>GH:</strong> <span>2–12 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> Cuerpo blanco/crema con manchas negras como oso panda: máscara en ojos, mancha en aleta dorsal y base de la cola. Adorables y muy populares. Un poco más delicadas que las moteadas, prefieren agua MUY limpia.</p>
+                            <p class="image-credit">Busca: "Corydoras Gold Laser"</p>
+                        </div>
+                    </div>
+
+                    <!-- Otocinclus -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/fJQS7tjq1vExQcUp796UHymEAc8q_weKnbocnnbsEtY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Z2FtYmFtYW5pYS5j/b20vMTA2My1sYXJn/ZV9kZWZhdWx0L290/b2NpbmNsdXMtYWZm/aW5pcy5qcGc" alt="Otocinclus affinis" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Otocinclus</div>
+                            <div class="fish-scientific">Otocinclus affinis</div>
+                            <div class="fish-quantity">🐠 Cantidad: 6 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>4-5 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Plantas/Cristales</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>6.0-7.5</span></li>
+                                <li><strong>Temp:</strong> <span>22-26°C</span></li>
+                                <li><strong>GH:</strong> <span>2–8 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> Pequeños come-algas pacíficos. Línea negra horizontal. Constantemente pegados a cristales y hojas limpiando algas. Muy tímidos. REQUIEREN agua muy limpia y oxigenada. Grupos de 6+ para sentirse seguros.</p>
+                            <p class="image-credit">Busca: "Otocinclus affinis" o "Oto catfish"</p>
+                        </div>
+                    </div>
+
+                    <!-- Gourami Perla -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/j4WrGqX10UMtNNCeaqwhX7jY8Q9fGaNeOb3WvoTGNkU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bmFzY2FwZXJzLmVz/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIx/LzEwL2dvdXJhbWkt/cGVybGEtdmVudGEt/dGllbmRhLW9ubGlu/ZS1uYXNjYXBlcnMu/cG5n" alt="Gourami Perla - Trichogaster leeri" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">⭐ Gourami Perla</div>
+                            <div class="fish-scientific">Trichogaster leeri</div>
+                            <div class="fish-quantity">🐠 Cantidad: 3 (1 Macho + 2 Hembras)</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>10-12 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Superior-Media</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico, tímido</span></li>
+                                <li><strong>pH:</strong> <span>6.0-7.5</span></li>
+                                <li><strong>Temp:</strong> <span>24-28°C</span></li>
+                                <li><strong>GH:</strong> <span>5–15 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> ¡ESPECTACULARES! Cuerpo plateado completamente cubierto de manchas perladas blancas. Machos con vientre naranja intenso y línea negra desde boca hasta cola. Aletas pélvicas largas en forma de hilo. Elegantes y majestuosos.</p>
+                            <p class="image-credit">Busca: "Trichogaster leeri" o "Pearl gourami"</p>
+                        </div>
+                    </div>
+
+                    <!-- Ancistrus -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/NBTcHxOPCegr0c9mdpRMisqCFf-5fPQEVjFoctm-iVM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bmFzY2FwZXJzLmVz/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDI0/LzA0L2FuY2lzdHJ1/cy1uZWdyby12ZWxv/LndlYnA" alt="Ancistrus sp." class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Pleco Ancistrus</div>
+                            <div class="fish-scientific">Ancistrus sp.</div>
+                            <div class="fish-quantity">🐠 Cantidad: 1 ejemplar</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>10-14 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Fondo</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>5.5-7.5</span></li>
+                                <li><strong>Temp:</strong> <span>20-30°C</span></li>
+                                <li><strong>GH:</strong> <span>2–20 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> Come-algas principal del acuario. Machos con "barbas" o tentáculos en la cabeza. Acorazado con placas óseas. Nocturnos pero activos de día. REQUIEREN troncos (comen celulosa). Complementar con verduras.</p>
+                            <p class="image-credit">Busca: "Ancistrus sp." o "Bristlenose pleco"</p>
+                        </div>
+                    </div>
+
+                    <!-- Gambas Amano -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/Cfi6tVm1YaG8mupD0eUHmWZFb7ADjCQ6CgwAQjOFbbo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9saXR0/bGV0cmVlZGVzaWdu/YmlvdG9wZXMuZXMv/Y2RuL3Nob3AvcHJv/ZHVjdHMvcy1sMzAw/X2dyYW5kZS5wbmc_/dj0xNjEzMzM3NDIx" alt="Gamba Amano - Caridina multidentata" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Gamba Amano</div>
+                            <div class="fish-scientific">Caridina multidentata</div>
+                            <div class="fish-quantity">🦐 Cantidad: 15 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>4-6 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Todo el acuario</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>6.5-7.5</span></li>
+                                <li><strong>Temp:</strong> <span>20-26°C</span></li>
+                                <li><strong>GH:</strong> <span>6–12 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> Grandes y robustas, transparentes con puntos marrones. Las MEJORES come-algas. Constantemente buscando comida. Muy activas. NO se reproducen en agua dulce (necesitan salobre). Perfectas para comunitarios.</p>
+                            <p class="image-credit">Busca: "Caridina multidentata" o "Amano shrimp"</p>
+                        </div>
+                    </div>
+
+                    <!-- Caracoles Neritina -->
+                    <div class="fish-card">
+                        <img src="https://imgs.search.brave.com/Q2VY_sxwed5R-pwjYBznfpXvvWieg0q3dobYIbdzl-0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cGxhbnRhc2RlYWN1/YXJpb3MuY29tL2lt/Zy9jbXMvY2FyYWNv/bC1uZXJpdGluYS5q/cGc" alt="Caracol Neritina" class="fish-image">
+                        <div class="fish-info">
+                            <div class="fish-name">Caracol Neritina</div>
+                            <div class="fish-scientific">Neritina sp.</div>
+                            <div class="fish-quantity">🐌 Cantidad: 5 ejemplares</div>
+                            <ul class="fish-details">
+                                <li><strong>Tamaño:</strong> <span>2-3 cm</span></li>
+                                <li><strong>Zona:</strong> <span>Cristales/Decoración</span></li>
+                                <li><strong>Temperamento:</strong> <span>Pacífico</span></li>
+                                <li><strong>pH:</strong> <span>6.5-8.0</span></li>
+                                <li><strong>Temp:</strong> <span>20-28°C</span></li>
+                                <li><strong>GH:</strong> <span>5–15 ºdH</span></li>
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Característica:</strong> EXCELENTES come-algas de cristales. NO se reproducen en agua dulce. Variedades: Cebra (rayas negras), Cuerno rojo, Tigre. Conchas duras y bonitas. Incansables limpiadores.</p>
+                            <p class="image-credit">Busca: "Neritina natalensis" o "Nerite snail"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLANTAS RECOMENDADAS -->
+            <div class="section">
+                <h2>🌿 GUÍA VISUAL DE PLANTAS - Control del Nitrógeno</h2>
+          
+                <h3>🌊 ZONA SUPERFICIE - Flotantes (CRÍTICAS para control de nitratos)</h3>
+                <div class="plant-list">
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/EEBM-smU7QCl-8l4eFgUqveYqUg2zaumt7iarEt2FJY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/aW52aXRhbC5hdC91/cGxvYWQvNzMyMDMt/MDkwMTAxOTc2Nl9z/LmpwZw" alt="Limnobium laevigatum" class="plant-image">
+                        <div class="plant-name">⭐ Limnobium laevigatum</div>
+                        <div class="plant-zone">Flotante</div>
+                        <p><strong>Amazon Frogbit (Lenteja de agua amazónica)</strong><br>
+                        🌟 Crecimiento: MUY RÁPIDO<br>
+                        💪 Consumo de NO3: EXTREMO<br>
+                        📍 Cobertura: 30-40% superficie<br>
+                        🍃 Hojas redondas flotantes + raíces largas colgantes<br>
+                        ✅ Imprescindible para Gouramis<br>
+                        ✂️ Poda: Semanal (eliminar exceso)</p>
+                        <p class="image-credit">Busca: "Limnobium laevigatum" o "Amazon frogbit"</p>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/kFwerCmgbJXDNOzOP_6MmdhvzpKXOhO7nQ_z040LQ-Y/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cHJvbWVzc2VkZWZs/ZXVycy5lcy9tZWRp/YS9jYXRhbG9nL3By/b2R1Y3QvY2FjaGUv/ZGM1YjAyZTIxZjE0/ZWI4MzE0MWY0ZmYy/Y2Y0OTIwZTQvUy9h/L1NhbHZpbmlhLW5h/dGFucy1JRi0yMTYw/OC0xLmpwZw" alt="Salvinia natans" class="plant-image">
+                        <div class="plant-name">Salvinia natans</div>
+                        <div class="plant-zone">Flotante</div>
+                        <p><strong>Salvinia</strong><br>
+                        🌟 Crecimiento: RÁPIDO<br>
+                        💪 Consumo de NO3: ALTO<br>
+                        🍃 Hojas pequeñas aterciopeladas<br>
+                        📍 Complementa Limnobium<br>
+                        ✅ Fácil de controlar<br>
+                        💡 Crea zonas de sombra natural</p>
+                        <p class="image-credit">Busca: "Salvinia natans"</p>
+                    </div>
+                </div>
+
+                <h3>🌲 ZONA TRASERA - Plantas de Tallo (Consumidoras voraces)</h3>
+                <div class="plant-list">
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/R7PcVf3ytz4U4_a42B4pdWxtOPw5puN5k-gmfXwpDl8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWN1YXJpb3BsYW50/YWRvLmNvbS82NDYt/bWVkaXVtX2RlZmF1/bHQvcGxhbnRhcy1k/ZS1hY3VhcmlvLWh5/Z3JvcGhpbGEtcG9s/eXNwZXJtYS1yb3Nh/bmVydmlnLmpwZw" alt="Hygrophila polysperma" class="plant-image">
+                        <div class="plant-name">⭐ Hygrophila polysperma</div>
+                        <div class="plant-zone">Trasera</div>
+                        <p><strong>Higrofila Común</strong><br>
+                        🌟 Crecimiento: EXPLOSIVO<br>
+                        💪 Consumo de NO3: MÁXIMO<br>
+                        📍 Sustrato: 5-7cm nutritivo<br>
+                        🍃 Hojas verdes opuestas, tallos rectos<br>
+                        ✂️ Poda: Semanal (crece 5-10cm/semana)<br>
+                        💡 Luz: Media-Alta<br>
+                        ✅ La MÁS fácil para principiantes</p>
+                        <p class="image-credit">Busca: "Hygrophila polysperma"</p>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/oxeOetSa2MgWZ3sYzbtAfPqdcbeaX2u_WalYLIjLY24/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmVi/YXlpbWcuY29tL3Ro/dW1icy9pbWFnZXMv/Zy9NS29BQWVTdzZ1/QnBKMktML3MtbDQw/MC53ZWJw" alt="Vallisneria spiralis" class="plant-image">
+                        <div class="plant-name">⭐ Vallisneria spiralis</div>
+                        <div class="plant-zone">Trasera</div>
+                        <p><strong>Vallisneria Espiral</strong><br>
+                        🌟 Crecimiento: RÁPIDO<br>
+                        💪 Consumo de NO3: MUY ALTO<br>
+                        🍃 Hojas largas en forma de cinta (hasta 40cm)<br>
+                        📍 Se extiende por estolones<br>
+                        ✅ MUY resistente<br>
+                        📏 Altura: Hasta superficie<br>
+                        💡 Movimiento ondulante con corriente</p>
+                        <p class="image-credit">Busca: "Vallisneria spiralis"</p>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/6AwSMfiDKHpWp6QhGSIAze_oilSn5lKv9q2EwYTKneA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/bmFzY2FwZXJzLmVz/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIw/LzA4L2FtYnVsaWEt/bGltbm9waGlsYS1z/ZXNzaWxpZmxvcmEt/My5qcGc" alt="Limnophila sessiliflora" class="plant-image">
+                        <div class="plant-name">Limnophila sessiliflora</div>
+                        <div class="plant-zone">Trasera</div>
+                        <p><strong>Ambulia</strong><br>
+                        🌟 Crecimiento: MUY RÁPIDO<br>
+                        💪 Consumo de NO3: ALTO<br>
+                        🍃 Hojas plumosas muy finas y bonitas<br>
+                        💡 Luz: Media-Alta<br>
+                        ✅ Aspecto muy decorativo<br>
+                        📏 Altura: 30-50cm</p>
+                        <p class="image-credit">Busca: "Limnophila sessiliflora" o "Ambulia"</p>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/JI3-xJCpS3ip1oBSDXmOejbHhl1-z8KtYIW8HyE_wGQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cGxhbnRzcmVzY3Vl/LmNvbS91c2VyZGF0/YS9pbWFnZXNfZWRp/dG9yL2FydGljbGVz/L3JvdGFsYS1yb3R1/bmRpZm9saWEuanBn" alt="Rotala rotundifolia" class="plant-image">
+                        <div class="plant-name">Rotala rotundifolia</div>
+                        <div class="plant-zone">Trasera</div>
+                        <p><strong>Rotala</strong><br>
+                        🌟 Crecimiento: RÁPIDO<br>
+                        💪 Consumo de NO3: ALTO<br>
+                        🎨 Color: Verde a Roja/Naranja con luz intensa<br>
+                        🍃 Hojas pequeñas redondeadas<br>
+                        ✅ Aporta color adicional al acuario<br>
+                        💡 Más roja con más luz</p>
+                        <p class="image-credit">Busca: "Rotala rotundifolia"</p>
+                    </div>
+
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/W7H80qN9c36XGceoH9h08U4thiuDlij_m5VbSiCv0vQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/aHlnZ2VyLW9ubGlu/ZS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjUvMDEvc3Vw/ZXItcmVkLWx1ZHdp/Z2lhLXBhbHVzdHJp/cy1uZXZlci1mYWls/cy10by1pbXByZXNz/NC5qcGc" alt="Ludwigia palustris Super Red" class="plant-image">
+                        <div class="plant-name">Ludwigia palustris "Super Red"</div>
+                        <div class="plant-zone">Trasera/Media</div>
+                        <p><strong>Ludwigia Super Red</strong><br>
+                        🎨 Color: Rojo brillante incluso con poca luz<br>
+                        🌟 Crecimiento: MEDIO–RÁPIDO<br>
+                        💡 Luz: Media<br>
+                        💨 CO2: Opcional (más roja con CO2)<br>
+                        📏 Altura: 20–40 cm<br>
+                        🍃 Hojas ovaladas rojas en ambas caras<br>
+                        🎯 Perfecta para dar un punto focal rojo</p>
+                        <p class="image-credit">Busca: "Ludwigia palustris super red"</p>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/49LkE8UlfCnPNrNAIWggndiotvkwqmFJjE6djxP2Lho/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YXF1YXJpdW1saW5l/LmNvbS81Mjg3NC1t/ZWRpdW1fZGVmYXVs/dC9yb3RhbGEtd2Fs/bGljaGlpLmpwZw" alt="Rotala wallichii" class="plant-image">
+                        <div class="plant-name">Rotala wallichii</div>
+                        <div class="plant-zone">Trasera</div>
+                        <p><strong>Rotala wallichii</strong><br>
+                        🎨 Color: Rosa a rojo pastel<br>
+                        🌟 Crecimiento: MEDIO<br>
+                        💡 Luz: Alta<br>
+                        💨 CO2: Necesario<br>
+                        📏 Altura: 30–50 cm<br>
+                        🍃 Hojas super finas y plumosas<br>
+                        🎯 Aporta textura delicada y muy decorativa</p>
+                        <p class="image-credit">Busca: "Rotala wallichii"</p>
+                    </div>
+
+                </div>
+
+                <h3>🪴 ZONA MEDIA - Plantas en Sustrato y Hardscape</h3>
+                <div class="plant-list">
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/B2ZAySOtqeQgq-gJTLNmLTjM3DrLbNxMn5NVStfJ6MI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTF6Q0tMSVZXbEwu/anBn" alt="Echinodorus bleheri" class="plant-image">
+                        <div class="plant-name">⭐ Echinodorus bleheri</div>
+                        <div class="plant-zone">Media-Centro</div>
+                        <p><strong>Espada Amazónica</strong><br>
+                        🌟 Tamaño: Grande (30-40cm diámetro)<br>
+                        💪 Consumo de NO3: ALTO<br>
+                        🍃 Hojas largas lanceoladas verde brillante<br>
+                        📍 Sustrato nutritivo profundo (7cm+)<br>
+                        🎯 Planta FOCAL central espectacular<br>
+                        Cantidad: 1-2 plantas</p>
+                        <p class="image-credit">Busca: "Echinodorus bleheri" o "Amazon sword"</p>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/Ob1ALKq1TqUcZDaFKKHpYCLMyuC_7sNO87WLjZNpszE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmlzaGlwZWRpYS5l/cy93cC1jb250ZW50/L3VwbG9hZHMvMjAx/Ni8xMC9DcnlwdG9j/b3J5bmUtd2VuZHRp/aS1Ucm9waWNhJUMy/JUE5LTcyNXg0ODMu/anBn" alt="Cryptocoryne wendtii" class="plant-image">
+                        <div class="plant-name">Cryptocoryne wendtii</div>
+                        <div class="plant-zone">Media</div>
+                        <p><strong>Cryptocoryne (Marrón/Verde/Roja)</strong><br>
+                        🌟 Crecimiento: Moderado<br>
+                        💪 Consumo de NO3: MEDIO<br>
+                        🍃 Hojas onduladas, color variable<br>
+                        📍 Sustrato: 5cm<br>
+                        ✅ MUY resistente e indestructible<br>
+                        🌿 Diferentes colores según luz<br>
+                        Cantidad: 8-12 plantas</p>
+                        <p class="image-credit">Busca: "Cryptocoryne wendtii"</p>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/Qg4as_yuwMc3_dlMvfs3rzW-oKOUAHdzxoOkVIpe6nY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFNRUlva0JIZkwu/anBn" alt="Anubias nana" class="plant-image">
+                        <div class="plant-name">⭐ Anubias nana</div>
+                        <div class="plant-zone">Troncos/Rocas</div>
+                        <p><strong>Anubias Nana</strong><br>
+                        🌟 Crecimiento: LENTO<br>
+                        💪 Consumo de NO3: BAJO<br>
+                        🍃 Hojas duras verde oscuro brillante<br>
+                        🪨 ATAR a troncos/rocas (NO enterrar rizoma)<br>
+                        ✅ INDESTRUCTIBLE - La más fácil<br>
+                        🐌 Resistente a caracoles<br>
+                        Cantidad: 5-8 plantas</p>
+                        <p class="image-credit">Busca: "Anubias nana" o "Anubias barteri nana"</p>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/dJJzAv5XvTjv4umhDSqxh3NK-GxMrYdazWOu9BlvcG8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wZXp2/ZXJkZS5lcy83Nzgx/LW1lZGl1bV9kZWZh/dWx0L21pY3Jvc29y/dW0tcHRlcm9wdXMt/ZW4tbWFjZXRhLmpw/Zw" alt="Microsorum pteropus" class="plant-image">
+                        <div class="plant-name">⭐ Microsorum pteropus</div>
+                        <div class="plant-zone">Troncos</div>
+                        <p><strong>Helecho de Java</strong><br>
+                        🌟 Crecimiento: Moderado<br>
+                        💪 Consumo de NO3: MEDIO<br>
+                        🍃 Hojas grandes en forma de helecho<br>
+                        🪨 ATAR a troncos (NO enterrar rizoma)<br>
+                        ✅ Muy resistente<br>
+                        🌿 Aspecto natural y selvático<br>
+                        Cantidad: 3-5 plantas</p>
+                        <p class="image-credit">Busca: "Microsorum pteropus" o "Java fern"</p>
+                    </div>
+
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/ikzK7uRLoCFeSs3Lk6XM5N1Z9JdJwvF8urMcujiFHMg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wbGFu/dHNuc2hyaW1wcy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTcvMDcvTmVzYWVh/LXBlZGljZWxsYXRh/LUdvbGRlbi5qcGc" alt="Nesaea pedicellata Golden" class="plant-image">
+                        <div class="plant-name">Nesaea pedicellata "Golden"</div>
+                        <div class="plant-zone">Media/Trasera</div>
+                        <p><strong>Nesaea Golden</strong><br>
+                        🎨 Color: Amarillo dorado brillante<br>
+                        🌟 Crecimiento: MEDIO<br>
+                        💡 Luz: Media-Alta<br>
+                        💨 CO2: Recomendado<br>
+                        📏 Altura: 15–35 cm<br>
+                        🍃 Hojas lanceoladas doradas muy vistosas<br>
+                        🎯 Contraste espectacular con plantas rojas</p>
+                        <p class="image-credit">Busca: "Nesaea pedicellata golden"</p>
+                    </div>
+
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/I6Z5dbJ75d1pgo7BLWfrvlwTjVGD_wuK6t01NmKHF-c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9leG90/aWMtc2hyaW1wLmVz/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE3/LzA0L2FsdGVybmFu/dGhlcmEtcmVpbmVj/a2lpLW1pbmktMS5q/cGc" alt="Alternanthera reineckii Mini" class="plant-image">
+                        <div class="plant-name">Alternanthera reineckii "Mini"</div>
+                        <div class="plant-zone">Media/Delantera</div>
+                        <p><strong>Alternanthera Mini</strong><br>
+                        🎨 Color: Rojo/magenta intenso<br>
+                        🌟 Crecimiento: LENTO–MEDIO<br>
+                        💡 Luz: Media-Alta<br>
+                        💨 CO2: Recomendado (mejora muchísimo el color)<br>
+                        📏 Altura: 5–15 cm<br>
+                        🍃 Forma matosa y compacta<br>
+                        🎯 Ideal para contrastar con verdes</p>
+                        <p class="image-credit">Busca: "Alternanthera reineckii mini"</p>
+                    </div>
+
+
+                </div>
+
+                <h3>🌱 ZONA DELANTERA - Tapizantes/Fondo</h3>
+                <div class="plant-list">
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/uoLjFOSYCmnvNdNh1jbqtP7zy8xZhrMo5iEw110ULEg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG54/Lmp1bXBzZWxsZXIu/Y29tL2FxdWF2ZXJz/by9pbWFnZS81MjQx/NjQ1My90aHVtYi83/MTkvNzE5PzE3MjUy/MDUzNjg" alt="Sagittaria subulata" class="plant-image">
+                        <div class="plant-name">⭐ Sagittaria subulata</div>
+                        <div class="plant-zone">Delantera</div>
+                        <p><strong>Sagitaria</strong><br>
+                        🌟 Crecimiento: RÁPIDO<br>
+                        💪 Consumo de NO3: ALTO<br>
+                        🍃 Hojas finas tipo hierba (10-15cm)<br>
+                        📍 Se extiende por estolones<br>
+                        🌾 Aspecto de césped/pradera<br>
+                        ✅ SIN CO2 necesario<br>
+                        🐟 Espacio abierto para Corydoras</p>
+                        <p class="image-credit">Busca: "Sagittaria subulata" o "Dwarf sagittaria"</p>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/6YsEfIlnrAm6qyCLhfJEb7pcFUwAZgLY10QzuEESLqI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4x/MS5iaWdjb21tZXJj/ZS5jb20vcy16ZHI3/ejd5Y2R0L2ltYWdl/cy9zdGVuY2lsLzcy/OHg3MjgvcHJvZHVj/dHMvMzg4MC8yNDg2/Ni8yX18zMTg5OC4x/NzI4MjQ3NjEyLmpw/Zz9jPTI" alt="Staurogyne repens" class="plant-image">
+                        <div class="plant-name">Staurogyne repens</div>
+                        <div class="plant-zone">Delantera</div>
+                        <p><strong>Staurogyne</strong><br>
+                        🌟 Crecimiento: Moderado<br>
+                        💪 Consumo de NO3: MEDIO<br>
+                        🌿 Tapizante compacta verde intenso<br>
+                        🍃 Hojas pequeñas redondeadas<br>
+                        💡 Luz: Media-Alta<br>
+                        ⚠️ CO2 recomendado pero opcional<br>
+                        ✂️ Poda ocasional para mantener compacta</p>
+                        <p class="image-credit">Busca: "Staurogyne repens"</p>
+                    </div>
+                </div>
+
+                <h3>🍄 MUSGOS - Troncos y Decoración</h3>
+                <div class="plant-list">
+                    <div class="plant-card">
+                        <img src="https://imgs.search.brave.com/UwbkTuSfECaDxuKpbNFkVctLP1Xo7MJfaNrhor2UH7w/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzIyMDE2NTM4L3Iv/aWwvYjIyYTg0LzI1/MTI3NzgzNDUvaWxf/MzQweDI3MC4yNTEy/Nzc4MzQ1X280dDcu/anBn" alt="Taxiphyllum barbieri" class="plant-image">
+                        <div class="plant-name">⭐ Taxiphyllum barbieri</div>
+                        <div class="plant-zone">Troncos</div>
+                        <p><strong>Musgo de Java</strong><br>
+                        🌟 Crecimiento: Lento-Moderado<br>
+                        💪 Consumo de NO3: BAJO<br>
+                        🍃 Musgo fino que cubre superficies<br>
+                        🪨 ATAR a troncos/rocas con hilo<br>
+                        🦐 Refugio perfecto para gambas y alevines<br>
+                        ✅ Extremadamente fácil<br>
+                        🌿 Aspecto natural y selvático</p>
+                        <p class="image-credit">Busca: "Taxiphyllum barbieri" o "Java moss"</p>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h4>💡 Configuración de Iluminación WRGB 2</h4>
+                    <p><strong>Intensidad:</strong> 60-70% (primeros 2 meses), luego 70-80%<br>
+                    <strong>Fotoperiodo:</strong> 7-8 horas diarias<br>
+                    <strong>Rampa:</strong> Encendido/apagado gradual (1 hora cada uno)<br>
+                    <strong>Espectro:</strong> Más blancos (70%) + azules (20%) + rojos (10%)<br>
+                    <strong>CO2:</strong> OPCIONAL - Con estas plantas no es necesario, pero mejorará el crecimiento significativamente</p>
+                </div>
+            </div>
+
+            <!-- LAYOUT DEL ACUARIO -->
+            <div class="section">
+                <h2>🎨 LAYOUT DEL ACUARIO - Distribución Espacial</h2>
+                
+                <div class="layout-diagram">
+                    <h3 style="text-align: center; margin-bottom: 20px;">Vista Frontal (120cm x 50cm)</h3>
+                    <div class="aquarium-view">
+                        <div class="zone zone-surface">
+                            🌊 SUPERFICIE (30-40% cubierta)<br>
+                            Limnobium laevigatum + Salvinia natans<br>
+                            🐠 3 Gouramis perla nadando tranquilos bajo flotantes
+                        </div>
+                        
+                        <div class="zone zone-upper">
+                            💙 ZONA SUPERIOR<br>
+                            🐠 10 Borrachitos + 8 Rasboras Arlequín<br>
+                            Espacio abierto para cardúmenes activos
+                        </div>
+                        
+                        <div class="zone zone-middle">
+                            💚 ZONA MEDIA<br>
+                            🐠 15 Rasbora Galaxy + 10 Tetra Cardenal + 8 Tetra Congo<br>
+                            🌿 Echinodorus bleheri (centro focal) | Cryptocoryne (laterales)<br>
+                            🪵 2-3 Troncos con Anubias + Helechos + Musgo de Java
+                        </div>
+                        
+                        <div class="zone zone-bottom">
+                            🟤 ZONA FONDO<br>
+                            🐠 10 Corydoras moteadas + 4 Corydoras panda + 6 Otocinclus + 1 Ancistrus<br>
+                            🦐 15 Gambas Amano + 5 Caracoles Neritina<br>
+                            🌾 Sagittaria subulata (delantera) + Espacio abierto<br>
+                            🪨 Rocas planas + Troncos con cuevas
+                        </div>
+                    </div>
+
+
+                    <h3 style="margin-top: 30px; margin-bottom: 15px;">Distribución de Hardscape</h3>
+                    <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #2a5298;">
+                        <p><strong>ZONA TRASERA (70% del fondo):</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px
