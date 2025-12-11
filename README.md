@@ -9,14 +9,15 @@
 **Aquarium Configuration (240L Freshwater Community Tank)**
 
 This repository hosts a standalone HTML document representing a personal aquarium setup and configuration for a 240-liter freshwater community tank (specifically designed for a Fluval Roma 240).
+Please note that the content and interface of this configuration guide are presented exclusively in Spanish.
 
-**Note:** This project is not intended to be a general aquascaping guide. It is a specific layout, stocking plan, and parameter reference designed for my personal testing and visualization.
+**Note:** This project is not intended to be a general aquascaping guide. It is a specific layout, stocking plan, and parameter reference designed for my personal testing and visualization. 
 
 ## 🚀 Live Demo
 
 You can view the live configuration sheet here:
-[**Click here to view the Aquarium Guide**](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/)
-*(Note: Replace the link above once your GitHub Pages is active)*
+[**Click here to view the Aquarium Guide**](https://lonelyrick.github.io/Acuario-Config/)
+
 
 ## 📄 Contents
 
